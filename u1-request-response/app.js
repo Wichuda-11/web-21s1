@@ -107,7 +107,7 @@ app.get('/cat-simulator', (req, res) => {
       <html>
       <head><link rel="stylesheet" href="/styles.css"></head>
       <body class="cats">
-        <li><a href="/cat-result">Pet the cat</a></li>
+        <a href="/cat-result">Pet the cat</a>
         <img src="/images/cat2.jpg" width="500"/>
       </html></body>
     `)
@@ -119,7 +119,7 @@ app.get('/cat-result', (req, res) => {
       <html>
       <head><link rel="stylesheet" href="/styles.css"></head>
       <body class="cats">
-        <li><a href="/cat-simulator">Ignore the cat</a></li>
+        <a href="/cat-simulator">Ignore the cat</a>
         <img src="/images/cat3.jpg" width="500"/>
       </html></body>
     `)
