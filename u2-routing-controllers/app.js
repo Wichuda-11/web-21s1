@@ -25,7 +25,7 @@ app.get('/products/search', getProduct)
 app.get('/rgb', getRGB)
 app.get('/:u1-to-:u2/:t1', getTemp)
 app.get('/echo', getEcho)
-app.get('/echo', getEchoByForm)
+app.post('/echo', getEchoByForm)
 
 const PORT = 3000
 app.listen(PORT,

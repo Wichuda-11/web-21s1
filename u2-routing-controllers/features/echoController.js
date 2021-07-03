@@ -18,7 +18,7 @@ const getEchoByForm = (req, res) => {
   const name = req.body.name
   const message = req.body.message
 
-  res.json(`Hello ${name}! <br><br>
+  res.send(`Hello ${name}! <br><br>
   You said : <br>
   <blockquote>${message}</blockquote>`)
 }
