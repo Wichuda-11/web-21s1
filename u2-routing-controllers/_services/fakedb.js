@@ -41,8 +41,19 @@ const findUserBySearch = (search) => {
   return Object.values(users).find(
     user => user.name.toLowerCase().includes(lowerSearch))
 }
+
+const products = {
+  lenovo: {},
+  asus: {}
+}
+
+const findProducts = (q) => {
+  return products[q]
+}
+
 module.exports = {
   findUser,
   findUserByUsername,
-  findUserBySearch
+  findUserBySearch,
+  findProducts
 }
