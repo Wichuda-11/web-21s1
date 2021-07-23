@@ -1,0 +1,35 @@
+@host = http://localhost:3000
+
+### Read All
+GET {{host}}/covid
+
+### Read One 
+GET {{host}}/covid/ca
+
+### Create 
+POST {{host}}/covid
+content-type: application/json
+
+{
+    "stateId": "CA",
+  "date": 1626825600000,
+  "cases": 3768000,
+  "casesNew": 815,
+  "vaccineOne": 25091123,
+  "vaccineOnePercent": 63.5,
+  "vaccineComplete": 20530789,
+  "vaccineCompletePercent": 51.9
+}
+
+### Update 
+PATCH {{host}}/covid/ca
+content-type: application/json
+
+{
+  "date": 1626825600000,
+  "cases": 3769000,
+  "casesNew": 900
+}
+
+### Delete 
+DELETE {{host}}/covid/ck
