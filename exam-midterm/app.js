@@ -3,7 +3,7 @@ const expHbs = require('express-handlebars')
 const { json, urlencoded } = require('body-parser')
 
 const { index } = require('./features/index-controller')
-const { heatRecordCreateForm } = require('./features/heats-controller')
+const { heatRecordCreateForm, heatLists, heatLineup, heatRecord, heatCreateForm } = require('./features/heats-controller')
 
 const app = express()
 
@@ -26,6 +26,10 @@ app.get('/', index)
 
 // TODO: เขียนเส้นทางของคุณที่นี่ // Write your routes here
 app.get('/records/new', heatRecordCreateForm)
+app.get('/heats', heatLists)
+app.get('/heats/:slug', heatLineup)
+app.get('/heats/:slug/schedule', heatRecord)
+app.post('/heats', heatCreateForm)
 
 // General
 app.get('/images/:catchall', (_req, res) => res.redirect('/images/404.jpg'))
