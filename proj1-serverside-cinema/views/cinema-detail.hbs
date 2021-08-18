@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BECinema</title>
+  <link rel="stylesheet" href="https://asia-southeast2-proj1-cinema.cloudfunctions.net/demo/css/main.css" />
+</head>
+
+<body>
+  <div class="pancake-stack">
+    <header>
+      <a href="https://asia-southeast2-proj1-cinema.cloudfunctions.net/demo/">
+        <h1>BECinema</h1>
+      </a>
+      <a href="https://asia-southeast2-proj1-cinema.cloudfunctions.net/demo/">
+        Phitsanulok | Jib
+      </a>
+    </header>
+    <main>
+
+      <h1>BEC Auditorium</h1>
+
+      <div class="cinema-details-grid">
+        <a
+          href="https://asia-southeast2-proj1-cinema.cloudfunctions.net/demo/book?screening=phitsanulok-bec-auditorium,1,1628857800">
+          <img src="https://asia-southeast2-proj1-cinema.cloudfunctions.net/demo/images/black-pink-movie.jpg" /><br />
+          <span class="screening-screen">Screen 1</span><br />
+          <span class="screening-time">19:30</span><br />
+          <span class="screening-title">Blackpink The Movie</span>
+        </a>
+        <a
+          href="https://asia-southeast2-proj1-cinema.cloudfunctions.net/demo/book?screening=phitsanulok-bec-auditorium,2,1628859600">
+          <img src="https://asia-southeast2-proj1-cinema.cloudfunctions.net/demo/images/dune-2021.jpg" /><br />
+          <span class="screening-screen">Screen 2</span><br />
+          <span class="screening-time">20:00</span><br />
+          <span class="screening-title">Dune</span>
+        </a>
+        <a
+          href="https://asia-southeast2-proj1-cinema.cloudfunctions.net/demo/book?screening=phitsanulok-bec-auditorium,3,1628861400">
+          <img src="https://asia-southeast2-proj1-cinema.cloudfunctions.net/demo/images/shang-chi.jpg" /><br />
+          <span class="screening-screen">Screen 3</span><br />
+          <span class="screening-time">20:30</span><br />
+          <span class="screening-title">Shang Chi and the Legend of the Ten Rings</span>
+        </a>
+        <a
+          href="https://asia-southeast2-proj1-cinema.cloudfunctions.net/demo/book?screening=phitsanulok-bec-auditorium,1,1628863200">
+          <img src="https://asia-southeast2-proj1-cinema.cloudfunctions.net/demo/images/black-pink-movie.jpg" /><br />
+          <span class="screening-screen">Screen 1</span><br />
+          <span class="screening-time">21:00</span><br />
+          <span class="screening-title">Blackpink The Movie</span>
+        </a>
+        <a
+          href="https://asia-southeast2-proj1-cinema.cloudfunctions.net/demo/book?screening=phitsanulok-bec-auditorium,1,1628868600">
+          <img src="https://asia-southeast2-proj1-cinema.cloudfunctions.net/demo/images/black-pink-movie.jpg" /><br />
+          <span class="screening-screen">Screen 1</span><br />
+          <span class="screening-time">22:30</span><br />
+          <span class="screening-title">Blackpink The Movie</span>
+        </a>
+        <a
+          href="https://asia-southeast2-proj1-cinema.cloudfunctions.net/demo/book?screening=phitsanulok-bec-auditorium,2,1628868600">
+          <img src="https://asia-southeast2-proj1-cinema.cloudfunctions.net/demo/images/dune-2021.jpg" /><br />
+          <span class="screening-screen">Screen 2</span><br />
+          <span class="screening-time">22:30</span><br />
+          <span class="screening-title">Dune</span>
+        </a>
+      </div>
+
+    </main>
+    <footer>
+      <ol>
+        <li><a href="https://asia-southeast2-proj1-cinema.cloudfunctions.net/demo/cinemas">Cinema List</a></li>
+        <li><a
+            href="https://asia-southeast2-proj1-cinema.cloudfunctions.net/demo/cinemas/phitsanulok-bec-auditorium">Cinema
+            Details</a></li>
+        <li><a href="https://asia-southeast2-proj1-cinema.cloudfunctions.net/demo/films">Film List</a></li>
+        <li><a href="https://asia-southeast2-proj1-cinema.cloudfunctions.net/demo/films/black-pink-movie">Film
+            Details</a></li>
+
+        <li><a
+            href="https://asia-southeast2-proj1-cinema.cloudfunctions.net/demo/book?screening=phitsanulok-bec-auditorium,1,1628863200">Booking
+            Form</a></li>
+        <li>
+          <form action="https://asia-southeast2-proj1-cinema.cloudfunctions.net/demo/book" method="POST">
+            <input type="hidden" name="seats" value="2A" />
+            <input type="hidden" name="seats" value="2B" />
+            <input type="hidden" name="screeningSlug" value="phitsanulok-bec-auditorium,1,1628863200" />
+            <input type="submit" value="Booking Submit [POST]" />
+          </form>
+        </li>
+        <li><a href="https://asia-southeast2-proj1-cinema.cloudfunctions.net/demo/tickets">My Tickets</a></li>
+        <li><a href="https://asia-southeast2-proj1-cinema.cloudfunctions.net/demo/api/v1/tickets">My Tickets (API)</a>
+        </li>
+      </ol>
+    </footer>
+  </div>
+</body>
+
+</html>

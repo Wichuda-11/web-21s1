@@ -1,5 +1,6 @@
 const express = require('express')
 const { json, urlencoded } = require('body-parser')
+const { cinemaList } = require('./features/cinema-controller')
 
 const app = express()
 
@@ -11,7 +12,6 @@ app.use(json())
 app.use(urlencoded({ extended: false }))
 
 // Routes
+app.get('/cinemas', cinemaList)
 
-const PORT = 3000
-app.listen(PORT,
-  () => console.log(`Listening: http://localhost:${PORT}`))
+module.exports = { app }
