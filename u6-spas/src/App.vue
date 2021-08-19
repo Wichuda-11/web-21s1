@@ -2,8 +2,10 @@
   <div id="app">
     <div id="nav">
       <router-link :to="{ name: 'Home' }">Home</router-link> |
-     <router-link :to="{ name: 'Colors' }">Colors</router-link>
+      <router-link :to="{ name: 'Colors' }">Colors</router-link> |
+      <router-link :to="{ name: 'EditProfile' }">Edit Profile</router-link> |
+      <router-link :to="{ name: 'Converter' }">Converter</router-link> |
     </div>
-    <router-view/>
+    <router-view />
   </div>
 </template>
