@@ -1,55 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
+{{#>becinema}}
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{#if metaTitle}}{{ metaTitle }} - {{/if}}BECinema</title>
-  <link rel="stylesheet" href="{{ baseUrl }}css/main.css" />
-</head>
+<h1>Cinemas</h1>
 
-<body>
-  <div class="pancake-stack">
-    <header>
-      <a href="{{baseUrl}}">
-        <h1>BECinema</h1>
-      </a>
-      <a href="{{baseUrl}}">
-        Phitsanulok | Jib
-      </a>
-    </header>
-    <main>
-      <h1>Cinemas</h1>
-      
-      <ul class="cinema-list">
-        <li><a href="{{baseUrl}}cinemas/bangkok-paragon">BECinema @ SiamParagon</a> Bangkok</li>
-        <li><a href="{{baseUrl}}cinemas/chiang-mai-maya">BECinema @ MAYA</a>Chiang Mai</li>
-        <li><a href="{{baseUrl}}cinemas/phitsanulok-bec-auditorium">BECAuditorium</a> Phitsanulok</li>
-        <li><a href="{{baseUrl}}cinemas/phitsanulok-central">BECinema @Central Plaza</a> Phitsanulok</li>
-        <li><a href="{{baseUrl}}cinemas/phitsanulok-canal">BECinema Canal View</a> Phitsanulok</li>
-      </ul>
-    </main>
-    <footer>
-      <ol>
-        <li><a href="{{baseUrl}}cinemas">Cinema List</a></li>
-        <li><a href="{{baseUrl}}cinemas/phitsanulok-bec-auditorium">Cinema Details</a></li>
-        <li><a href="{{baseUrl}}films">Film List</a></li>
-        <li><a href="{{baseUrl}}films/black-pink-movie">Film Details</a></li>
+<ul class="cinema-list">
+  {{#each cinemaList}}
+  <li><a href='/cinemas/{{ slug }}'>{{ name }}</a> {{ city }}</li>
+  {{/each}}
+</ul>
 
-        <li><a href="{{baseUrl}}book?screening=phitsanulok-bec-auditorium,1,1628863200">Booking Form</a></li>
-        <li>
-          <form action="{{baseUrl}}book" method="POST">
-            <input type="hidden" name="seats" value="2A" />
-            <input type="hidden" name="seats" value="2B" />
-            <input type="hidden" name="screeningSlug" value="phitsanulok-bec-auditorium,1,1628863200" />
-            <input type="submit" value="Booking Submit [POST]" />
-          </form>
-        </li>
-        <li><a href="{{baseUrl}}tickets">My Tickets</a></li>
-        <li><a href="{{baseUrl}}api/v1/tickets">My Tickets (API)</a></li>
-      </ol>
-    </footer>
-  </div>
-</body>
-
-</html>
+{{/becinema}}
