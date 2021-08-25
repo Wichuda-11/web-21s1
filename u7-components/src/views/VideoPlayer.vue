@@ -44,7 +44,7 @@ export default class VideoPlayer extends Vue {
 
   loadData (id: string): void {
     this.video = getVideo(id)
-    this.suggestions = getSuggestions(6)
+    this.suggestions = getSuggestions(7).filter(video => video.id !== id).slice(0, 6)
   }
 }
 </script>
