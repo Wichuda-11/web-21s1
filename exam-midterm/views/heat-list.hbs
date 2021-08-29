@@ -1,0 +1,11 @@
+{{#>page}}
+
+
+<h1>Heat List</h1>
+<ul>
+  {{#each heats}}
+  <li><a href='/heats/{{ heatsCode }}'>{{ heatsCode }}  {{ round }} @ {{ dateString }}</a></li>
+  {{/each}}
+</ul>
+
+{{/page}}

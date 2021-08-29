@@ -46,19 +46,18 @@ const bookCreateForm = async (req, res) => {
 
 const bookCreate = async (req, res) => {
   // 1. Inputs
-  const isbn13 = req.body.isbn13
-  const title = req.body.title
+  const name = req.body.name
   const description = req.body.description
   const pages = parseInt(req.body.pages) || 0
   const authorRaw = req.body.authorIds || []
   const authors = Array.isArray(authorRaw) ? authorRaw : [authorRaw]
 
-  const book = { isbn13, title, description, pages, authors }
+  const heat = { isbn13, title, description, pages, authors }
 
   // 2. Queries
   const query = db.collection('books')
     .doc(isbn13)
-    .set(book, { merge: true })
+    .set(heat, { merge: true })
 
   // 3. Response
   await query
