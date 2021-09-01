@@ -15,15 +15,28 @@
       src="/images/icons/playlist-plus.png"
       alt="Add to watch later"
     />
+    <img
+      @click.prevent="removeFromWatchLater(video.id)"
+      class="watch-later-remove"
+      src="/images/icons/playlist-remove.png"
+      alt="Add to watch later"
+    />
   </router-link>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
 import Component from 'vue-class-component'
-
 @Component({ props: ['video'] })
-export default class VideoCard extends Vue { }
+export default class VideoCard extends Vue {
+  addToWatchLater (videoId: string): void {
+    this.$store.dispatch('addToWatchLater', videoId)
+  }
+
+  removeFromWatchLater (videoId: string): void {
+    this.$store.dispatch('removeFromWatchLater', videoId)
+  }
+}
 </script>
 
 <style scoped>
@@ -36,16 +49,13 @@ export default class VideoCard extends Vue { }
   border: 1px solid #efefef;
   text-decoration: none;
 }
-
 .home-card > div {
   position: relative;
 }
-
 .home-card > div > img {
   display: block;
   width: 100%;
 }
-
 .home-card > div > p {
   position: absolute;
   bottom: 0;
@@ -57,7 +67,6 @@ export default class VideoCard extends Vue { }
   color: #ffffff;
   font-size: 0.75rem;
 }
-
 .home-card > p {
   width: 100%;
   margin: 8px;
@@ -69,13 +78,19 @@ export default class VideoCard extends Vue { }
   line-height: 1.3em;
   max-height: 2.6em;
 }
-
-.watch-later {
+.watch-later,
+.watch-later-remove {
   position: absolute;
   height: 2rem;
-  top: 0;
-  right: 0;
   padding: 0.5rem;
   filter: invert();
+}
+.watch-later {
+  top: 0;
+  right: 0;
+}
+.watch-later-remove {
+  top: 2rem;
+  right: 0;
 }
 </style>
