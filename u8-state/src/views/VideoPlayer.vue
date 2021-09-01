@@ -30,7 +30,7 @@ Component.registerHooks([
 @Component({ components: { VideoTease } })
 export default class VideoPlayer extends Vue {
   get video (): Video | undefined {
-    return this.$store.getters.videosById[this.$route.params.videoId]
+    return this.$store.getters.videosById[this.$route.params.videoId] ?? null
   }
 
   get suggestions (): Video[] {
