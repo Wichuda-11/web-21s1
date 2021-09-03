@@ -1,14 +1,12 @@
 # Secrets
 firebase-config*.ts
 
+# local env files
+.env.*.local
+
 # Deps
 node_modules
 /dist
-
-
-# local env files
-.env.local
-.env.*.local
 
 # Log files
 npm-debug.log*
