@@ -2,7 +2,7 @@
   <div id="app">
     <b-navbar type="is-primary">
       <template #brand>
-        <b-navbar-item tag="router-link" :to="{ path: '/:isbn13' }" class="is-size-5">
+        <b-navbar-item tag="router-link" :to="{ path: '/' }" class="is-size-5">
           <b-icon icon="book-open-page-variant mr-4"></b-icon>
           <p>BEC Books</p>
         </b-navbar-item>
