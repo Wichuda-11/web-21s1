@@ -1,9 +1,9 @@
+import { db } from '@/_services/firebase-initialized'
+import { keyBy } from 'lodash'
 import Vue from 'vue'
 import Vuex from 'vuex'
 import { firestoreAction, vuexfireMutations } from 'vuexfire'
-import { db } from '@/_services/firebase-initialized'
 import { Cinema, Film, Screening, Ticket } from './models'
-import { keyBy } from 'lodash'
 
 Vue.use(Vuex)
 
@@ -48,7 +48,7 @@ const store = new Vuex.Store<Store>({
       bindFirestoreRef('cinemas', db.collection('cinemas')),
       bindFirestoreRef('films', db.collection('films')),
       bindFirestoreRef('screenings', db.collection('screenings')),
-      bindFirestoreRef('tickets', db.collection('users').doc('chaz').collection('tickets'))
+      bindFirestoreRef('tickets', db.collection('users').doc('Jib').collection('tickets'))
     ])),
     changeLocation: ({ commit }, location) => {
       commit('location/set', location)
@@ -56,6 +56,6 @@ const store = new Vuex.Store<Store>({
   }
 })
 
-void store.dispatch('init')
+store.dispatch('init')
 
 export default store
