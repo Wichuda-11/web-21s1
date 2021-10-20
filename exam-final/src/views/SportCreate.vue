@@ -2,22 +2,25 @@
   <div class="page-sport-create">
     <div class="section">
       <p class="title is-2">Create Sport</p>
-
+      <div class="columns">
+        <div class="column">
       <b-field label="Description" label-position="on-border">
-        <b-input type="textarea" />
+        <b-input v-model="description" type="textarea" />
       </b-field>
 
       <b-field label="Event Count" label-position="on-border">
-        <b-input type="number" />
+        <b-input v-model="eventCount" type="number" />
       </b-field>
 
       <b-field label="Name" label-position="on-border">
-        <b-input />
+        <b-input v-model="name" />
       </b-field>
 
       <b-field label="Slug" label-position="on-border">
-        <b-input />
+        <b-input  v-model="slug" />
       </b-field>
+      </div>
+    </div>
 
       <b-button type="is-primary" size="is-large" expanded @click="save(sport)">Save Sport</b-button>
     </div>
