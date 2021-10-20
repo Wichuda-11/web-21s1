@@ -24,9 +24,9 @@
         <b-navbar-item tag="router-link" :to="{ name: 'ResultCreate' }">Create Result</b-navbar-item> -->
 
         <!-- SPORTS -->
-        <!-- <b-navbar-item tag="router-link" :to="{ name: 'SportDetails', params: { sportSlug: 'sprinting' } }">Sport: Sprinting</b-navbar-item>
+        <b-navbar-item tag="router-link" :to="{ name: 'SportDetails', params: { sportSlug: 'sprinting' } }">Sport: Sprinting</b-navbar-item>
         <b-navbar-item tag="router-link" :to="{ name: 'SportList' }">Sports</b-navbar-item>
-        <b-navbar-item tag="router-link" :to="{ name: 'SportCreate' }">Create Sport</b-navbar-item> -->
+        <b-navbar-item tag="router-link" :to="{ name: 'SportCreate' }">Create Sport</b-navbar-item>
 
         <!-- TEAMS -->
         <!-- <b-navbar-item tag="router-link" :to="{ name: 'TeamDetails', params: { teamSlug: 'usa' } }">Team: USA</b-navbar-item>
