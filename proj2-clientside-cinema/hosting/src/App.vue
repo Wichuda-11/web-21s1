@@ -4,6 +4,56 @@
     class="has-background-light"
   >
     <!-- ADD NAVBAR HERE -->
+    <b-navbar class="is-primary">
+        <template #brand>
+            <b-navbar-item tag="router-link" :to="{ path: '/' }" class="is-size-1">
+                BECinema
+            </b-navbar-item>
+            <b-navbar-item tag="router-link" :to="{ path: '/cinemas' }">
+                Cinemas
+            </b-navbar-item>
+            <b-navbar-item tag="router-link" :to="{ path: '/films' }">
+                Films
+            </b-navbar-item>
+        </template>
+
+        <template #end>
+          <b-navbar-dropdown collapsible hoverable right>
+          <template #label>
+            <b-icon icon="map-marker-radius"></b-icon>
+            <p>$store.city</p>
+          </template>
+                <b-navbar-item tag="router-link" :to="{ path: '/' }">
+                Bangkok
+                </b-navbar-item>
+                <b-navbar-item tag="router-link" :to="{ path: '/' }">
+                Chiang Mai
+                </b-navbar-item>
+                <b-navbar-item tag="router-link" :to="{ path: '/' }">
+                Phitsanulok
+                </b-navbar-item>
+            </b-navbar-dropdown>
+
+            <b-navbar-dropdown right>
+          <template #label>
+            <div style="user-select: none">
+              <figure class="image mr-2">
+                <img
+                  class="is-rounded"
+                  src="/images/accounts/cat2.jpg"
+                  alt="Jib"
+                >
+              </figure>
+              Jib
+            </div>
+          </template>
+                <b-navbar-item tag="router-link" :to="{ path: '/tickets' }">
+                My Tickets
+                </b-navbar-item>
+            </b-navbar-dropdown>
+
+        </template>
+    </b-navbar>
 
     <div class="container py-5">
       <router-view />
