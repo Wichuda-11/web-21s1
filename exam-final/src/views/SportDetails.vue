@@ -1,11 +1,13 @@
 <template>
-  <div class="sport-details">
-    <h1 class="title">Gymnastics</h1>
-      <li>
-          <h1>{{ sportDetails.name }}</h1>
-          Event count: {{ sportDetails.eventCount }}<br>
-          {{sportDetails.description}}
-      </li>
+  <div class="page-sport-details">
+    <div class="section" v-if="sport">
+      <p class="title is-2">{{ sport.name }}</p>
+      <p class="title is-5">Event count: {{ sport.eventCount }}</p>
+      <p>{{ sport.description }}</p>
+    </div>
+    <div class="section" v-else>
+      <p class="title is-2">Sport not found</p>
+    </div>
   </div>
 </template>
 
@@ -15,8 +17,8 @@ import { Component, Vue } from 'vue-property-decorator'
 
 @Component
 export default class SportDetails extends Vue {
-  get Sport (): Sport | undefined {
-    return this.$store.getters.sportsBySlug[this.$route.params.slug] ?? null
+  get sport (): Sport | undefined {
+    return this.$store.getters.sportsBySlug[this.$route.params.sportSlug]
   }
 }
 

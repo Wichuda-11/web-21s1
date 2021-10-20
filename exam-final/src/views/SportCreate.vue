@@ -19,7 +19,7 @@
         <b-input />
       </b-field>
 
-      <b-button type="is-primary" size="is-large" expanded>Save Sport</b-button>
+      <b-button type="is-primary" size="is-large" expanded @click="save(sport)">Save Sport</b-button>
     </div>
   </div>
 </template>
@@ -38,7 +38,8 @@ export default class AthleteCreate extends Vue {
   async save (): Promise<void> {
     const { slug, name, description, eventCount } = this
     const sport: Sport = { slug, name, description, eventCount }
-    // TODO: Save & redirect
+    this.$store.dispatch('create-sport', sport)
+    this.$router.push({ name: 'sportDetails', params: { sportSlug: sport.slug } })
   }
 }
 </script>

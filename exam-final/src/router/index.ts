@@ -26,7 +26,7 @@ const routes: Array<RouteConfig> = [
     component: Home
   },
   {
-    path: '/sports/slug',
+    path: '/sports/:sportSlug',
     name: 'SportDetails',
     component: SportDetails
   },
